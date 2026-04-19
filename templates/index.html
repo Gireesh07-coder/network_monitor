@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Network Monitor Dashboard</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #0f172a;
+            color: white;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #334155;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e293b;
+        }
+
+        .status-up {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        .status-down {
+            color: #ef4444;
+            font-weight: bold;
+        }
+
+        canvas {
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🚀 Network Health Monitor Dashboard</h1>
+
+    <div class="container">
+
+        <div class="card">
+            <h2>🌐 Host Status</h2>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Host</th>
+                        <th>Status</th>
+                        <th>Latency</th>
+                        <th>Uptime %</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>📈 Latency Over Time</h2>
+            <canvas id="chart"></canvas>
+        </div>
+
+    </div>
+
+    <script src="/static/script.js?v=4"></script>
+
+</body>
+
+</html>
